@@ -2,7 +2,7 @@
   font-family: "Inter", sans-serif !important;
   height: 100vh;
   width: 100%;
-  background-color: var(--light-color);
+  background-color: var(--background-color);
   color: var(--font-color);
   font-size: var(--font-size);
   transition: var(--transition);
@@ -12,10 +12,10 @@
   margin-left: auto;
   margin-right: auto;
 
-  --primary-color: #660404;
+  --primary-color: #faae2b;
   --secondary-color: #6c757d;
   --dark-color: #343a40;
-  --light-color: #f8f9fa;
+  --background-color: #333333;
   --danger-color: #dc3545;
   --success-color: #28a745;
   --warning-color: #ffc107;
@@ -80,23 +80,23 @@ button {
 }
 
 button:hover {
-  background-color: #06138b;
+  background-color: var(--primary-color);
   color: white !important;
 }
 
 button.primary {
   background-color: var(--primary-color);
-  color: var(--light-color);
+  color: var(--background-color);
 }
 
 button.danger {
   background-color: var(--danger-color);
-  color: var(--light-color);
+  color: var(--background-color);
 }
 
 button.success {
   background-color: var(--success-color);
-  color: var(--light-color);
+  color: var(--background-color);
 }
 
 input {
@@ -125,6 +125,9 @@ input:focus {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  border-color: var(--primary-color);
+  border-width: 5px;
+  border-style: solid;
   text-align: center;
   padding: 20px;
 }
@@ -153,6 +156,20 @@ input:focus {
   display: flex;
 }
 
+.horizontalContainer button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.textbutton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
 .horizontalContainer {
   display: flex;
   gap: 10px;
@@ -163,16 +180,14 @@ input:focus {
 }
 
 #addr {
+  text-align: center;
+  margin-top: 30px;
   flex: 1;
-  max-width: 49%;
-}
-
-.horizontalContainer button {
-  padding: 10px 20px;
-  cursor: pointer;
+  max-width: 35%;
 }
 
 #emails {
+  background-color: var(--primary-color);
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -196,7 +211,7 @@ input:focus {
 
 footer {
   background-color: var(--primary-color);
-  color: var(--light-color);
+  color: #ffffff;
   text-align: center;
   font-size: small;
   padding: 0.5rem;
@@ -241,7 +256,7 @@ footer {
 
 .warning-button:hover {
   background-color: var(--danger-color);
-  color: var(--light-color);
+  color: var(--background-color);
   cursor: pointer;
 }
 
