@@ -1,3 +1,7 @@
+// Author: Mehmet Kahya
+// Created: 17 March 2024
+// Last Updated: 28.08.2024
+
 console.log(`
 ██████╗  █████╗ ███╗   ██╗██████╗ ██╗████████╗███████╗
 ██╔══██╗██╔══██╗████╗  ██║██╔══██╗██║╚══██╔══╝██╔════╝
@@ -53,7 +57,7 @@ function refreshMail() {
             <th><b>From</b></th>
             <th><b>Subject</b></th>
             <th><b>Date</b></th>
-            <th><b>Content</b></th>
+            <th><b>Action</b></th>
           </tr>
         `);
 
@@ -64,7 +68,7 @@ function refreshMail() {
               <td>${email.from}</td>
               <td>${email.subject}</td>
               <td>${email.date}</td>
-              <td id="${email.id}"><button onclick="loadEmail('${email.id}')">Load content...</button></td>
+              <td id="${email.id}"><a onclick="loadEmail('${email.id}')">Open</a></td>
             </tr>
           `);
       }
