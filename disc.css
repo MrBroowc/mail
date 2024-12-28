@@ -228,7 +228,7 @@
 	outline: none
 }
 
-.wrapper_fea3ef {
+.wrapper_ {
 	width: var(--server-listing-width)
 }
 
@@ -239,7 +239,7 @@
 .wrapper_fea3ef .scroller_fea3ef {
 	display: flex;
 	flex-flow: row wrap;
-	padding-left: 100;
+	padding-left: 0;
 	align-content: flex-start
 }
 
