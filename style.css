@@ -1,349 +1,442 @@
 :root {
-  font-family: "Inter", sans-serif !important;
-  height: 100vh;
-  width: 100%;
-  background-color: var(--background-color);
-  color: var(--font-color);
-  font-size: var(--font-size);
-  transition: var(--transition);
+  --primary-color: #008080;
+  --secondary-color: #145ddb;
+  --text-color: #ffffff;
+  --button-bg-color: rgba(255, 255, 255, 0.2);
+  --button-hover-bg-color: rgba(255, 255, 255, 0.3);
+  --notification-bg-color: #7e67a1;
+  --notification-hover-bg-color: #a683dd;
+  --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  overflow-x: hidden;
+}
 
-  --primary-color: #faae2b;
-  --secondary-color: #6c757d;
-  --dark-color: #343a40;
-  --background-color: #333333;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --font-color: #212529;
-  --font-size: 1.2rem;
-  --border-radius: 0.25rem;
-  --transition: all 0.5s ease;
-}
 body {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-header ::selection {
-  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
 header {
-  background-color: var(--primary-color);
-  color: var(--dark-color);
-  padding: 1rem 0;
-  text-align: center;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  z-index: 1000;
-  border-radius: var(--border-radius);
-}
-
-header .ascii-art {
-  font-size: 0.6rem;
-  font-weight: bolder;
-  color: rgb(255, 255, 255);
-  margin: 0;
-}
-
-header p {
-  margin: 0;
-  font-size: 60%;
-  width: fit-content;
-  text-align: center;
-  margin: 0 auto;
-  color: white;
-  font-weight: bolder !important;
-}
-
-button {
-  padding: 0.45rem 0.75rem;
-  font-size: 0.75rem;
-  font-weight: bolder !important;
-  border: 1px solid var(--dark-color);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: var(--transition);
-  margin: 0.25rem;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-}
-
-button:hover {
-  background-color: var(--primary-color);
-  color: white !important;
-}
-
-button.primary {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-}
-
-button.danger {
-  background-color: var(--danger-color);
-  color: var(--background-color);
-}
-
-button.success {
-  background-color: var(--success-color);
-  color: var(--background-color);
-}
-
-input {
-  padding: 0.25rem;
-  font-size: 1rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--secondary-color);
-  margin: 0.25rem;
-  width: 100%;
-  outline: none;
-}
-
-input:focus {
-  border: 1px solid var(--primary-color);
-}
-
-.popup {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1001; /* Above other elements */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 400px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border-color: var(--primary-color);
-  border-width: 5px;
-  border-style: solid;
-  text-align: center;
+  background: var(--button-bg-color);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 20px;
-}
-
-.popup .main {
-  font-weight: bolder;
-}
-
-.popup-content {
-  position: relative;
-}
-
-.close-btn {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: red;
-  width: 25px;
-  height: 25px;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.horizontalContainer button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-.textbutton {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 20px 0px;
-}
-
-.horizontalContainer {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-#addr {
   text-align: center;
-  margin-top: 30px;
-  flex: 1;
-  max-width: 35%;
+  margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
 }
 
-#emails {
-  background-color: var(--primary-color);
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  animation: bounce 2s infinite;
+}
+
+.header-text {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.container {
+  color: var(--text-color);
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--button-bg-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+
+.email-generator {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.email-generator input {
+  color: var(--text-color);
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 350px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background: var(--button-bg-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.email-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.email-buttons button {
+  padding: 12px 24px;
+  background: var(--button-bg-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.email-buttons button:hover {
+  background: var(--button-hover-bg-color);
+}
+
+.email-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.email-list {
+  margin-top: 20px;
+}
+
+.email-list table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.email-list table th, .email-list table td {
+  padding: 15px;
+  border: 1px solid #333;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.email-list table th {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.email-list table td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--button-bg-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #181818;
+}
+
+.email-details {
+  display: none;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
   margin-top: 20px;
-  text-align: center;
-  margin: 0 auto;
-  align-items: center;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.email-details h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.email-details p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.email-details p strong {
+  color: #181818;
+}
+
+.email-details .email-body {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--button-bg-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 16px;
+  color: var(--text-color);
+  white-space: pre-wrap;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(173, 173, 173, 0.2);
+}
+
+.back-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.email-list table td.button-cell {
+  display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
-#emails th,
-#emails td {
-  border: 1px solid #ddd;
-  padding: 8px;
+.open-email-button {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#emails th {
-  background-color: #f2f2f2;
-  text-align: center;
+.open-email-button:hover {
+  background-color: rgba(173, 173, 173, 0.2);
+  transform: scale(1.05);
+}
+
+.open-email-button:active {
+  transform: scale(0.98);
+}
+
+.open-email-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 footer {
-  background-color: var(--primary-color);
-  color: #ffffff;
+  background: var(--button-bg-color);
+  color: var(--text-color);
   text-align: center;
-  font-size: small;
-  padding: 0.5rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  font-weight: bolder !important;
-}
-
-.social {
-  width: fit-content;
-  height: auto;
-  padding: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 15px 0;
+  width: 90%;
   margin: 0 auto;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-.social a {
-  margin: 5px;
-  font-size: 1rem;
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 5px;
+  min-width: 150px;
+}
+
+.footer-section h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 3px 0;
+}
+
+.footer-section ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  color: var(--text-color);
+  padding: 8px 0;
   text-align: center;
-  display: inline-block;
-  color: var(--main-fonts-color);
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 14px;
 }
 
-.social a:hover {
-  color: rgb(214, 227, 243);
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-5px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
 }
 
-.warning-button {
-  display: flex !important;
-  position: absolute;
-  bottom: 0 !important;
-  left: 0 !important;
-  font-size: 0.5rem;
-  padding: 0.5rem;
-  margin: 0.75rem !important;
-}
-
-.warning-button:hover {
-  background-color: var(--danger-color);
-  color: var(--background-color);
-  cursor: pointer;
-}
-
-
-@media (max-width: 768px) {
-  button {
-    font-size: 0.5rem;
+@media (max-width: 600px) {
+  body {
+      font-size: 14px;
   }
-  input {
-    font-size: 0.76rem;
+  header {
+      width: 100%;
+      padding: 15px;
   }
-  table {
-    font-size: 0.76rem;
+  .container {
+      padding: 15px;
+  }
+  .header-container {
+      flex-direction: column;
+      text-align: center;
   }
 
-  table th,
-  table td {
-    padding: 0.2rem;
+  .logo {
+      margin: 0 0 10px;
   }
 
-  header img {
-    width: 100%;
+  .header-text h1 {
+      font-size: 2em;
   }
-  header p {
-    font-size: 50%;
+
+  .header-text p {
+      font-size: 1em;
+  }
+  .email-generator input {
+      width: 90%;
+      font-size: 16px;
+  }
+  .email-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .email-buttons button {
+      margin: 0;
+      width: 100%;
+      font-size: 14px;
+  }
+  .email-list table th, .email-list table td {
+      font-size: 12px;
+      padding: 10px;
+  }
+  .email-details {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+  }
+  .email-details h3 {
+      font-size: 20px;
+  }
+  .email-details p {
+      font-size: 14px;
+  }
+  .email-details .back-button {
+      font-size: 14px;
+      padding: 8px 16px;
   }
   footer {
-    font-size: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .ascii-art {
-    font-size: 0.5rem !important;
-  }
-  button {
-    font-size: 0.4rem;
-  }
-  input {
-    font-size: 0.6rem;
-  }
-  table {
-    font-size: 0.6rem;
-  }
-
-  table th,
-  table td {
-    padding: 0.2rem;
-  }
-
-  header img {
-    width: 100%;
-  }
-  header p {
-    font-size: 40%;
-  }
-  footer {
-    font-size: 40%;
-  }
-}
-
-@media (max-width: 320px) {
-  .ascii-art {
-    font-size: 0.4rem !important;
-  }
-  button {
-    font-size: 0.3rem;
-  }
-  input {
-    font-size: 0.5rem;
-  }
-  table {
-    font-size: 0.5rem;
-  }
-
-  table th,
-  table td {
-    padding: 0.2rem;
-  }
-
-  header img {
-    width: 100%;
-  }
-  header p {
-    font-size: 30%;
-  }
-  footer {
-    font-size: 30%;
+      padding: 5px;
+      font-size: 12px;
+      width: 100%;
   }
 }
