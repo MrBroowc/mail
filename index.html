@@ -1,85 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
     <title>Bandits Mails</title>
-    <link rel="stylesheet" href="https://mrbroowc.github.io/mail/style.css">
+    <link rel="stylesheet" href="https://mrbroowc.github.io/mail/style.css" />
     <script src="https://mrbroowc.github.io/mail/function.js" defer></script>
-</head>
-<body onload="loadStoredEmail()">
+  </head>
+  <body onload="loadStoredEmail()">
     <header>
-        <div class="header-container">
-            <img src="https://raw.githubusercontent.com/MrBroowc/mail/refs/heads/main/assets/img/small%20icon.png" alt="Bandits Logo" class="logo">
-            <div class="header-text">
-                <h1>Bandits</h1>
-                <p>Your temporary email service</p>
-            </div>
+      <div class="header-container">
+        <img
+          src="https://raw.githubusercontent.com/MrBroowc/mail/refs/heads/main/assets/img/small%20icon.png"
+          alt="Bandits Logo"
+          class="logo"
+        />
+        <div class="header-text">
+          <h1>Bandits</h1>
+          <p>Your temporary email service</p>
         </div>
+      </div>
     </header>
     <main class="container">
-        <section class="email-generator">
-            <input type="text" placeholder="Enter custom email or generate a random one" disabled id="emailInput" onfocus="this.select()">
-        </section>
-        <section class="email-buttons">
-            <button onclick="generateEmail()" aria-label="Generate a new email address">Generate Email</button>
-            <button onclick="copyEmail()" aria-label="Copy the generated email address">Copy Email</button>
-            <button onclick="loadEmails()" aria-label="Load emails for the generated address">Refresh</button>
-        </section>
-        <section class="email-list" aria-live="polite">
-            <h2>Inbox</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>From</th>
-                        <th>Action</th>
-                        <th>Received</th>
-                    </tr>
-                </thead>
-                <tbody id="emailTableBody">
-                    <tr>
-                        <td colspan="3" style="text-align: center;">No emails yet...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="email-details" id="emailDetails" aria-live="polite">
-            <h3>Email Details</h3>
-            <p><strong>From:</strong> <span id="emailFrom"></span></p>
-            <p><strong>Subject:</strong> <span id="emailSubject"></span></p>
-            <p><strong>Date:</strong> <span id="emailDate"></span></p>
-            <p><strong>Message:</strong></p>
-            <div id="emailBody" class="email-body"></div>
-            <button class="back-button" onclick="document.getElementById('emailDetails').style.display = 'none'">Close</button>
-        </section>
+      <section class="email-generator">
+        <input
+          type="text"
+          placeholder="Enter custom email or generate a random one"
+          disabled
+          id="emailInput"
+          onfocus="this.select()"
+        />
+      </section>
+      <section class="email-buttons">
+        <button
+          onclick="generateEmail()"
+          aria-label="Generate a new email address"
+        >
+          Generate Email
+        </button>
+        <button
+          onclick="copyEmail()"
+          aria-label="Copy the generated email address"
+        >
+          Copy Email
+        </button>
+        <button
+          onclick="loadEmails()"
+          aria-label="Load emails for the generated address"
+        >
+          Refresh
+        </button>
+      </section>
+      <section class="email-list" aria-live="polite">
+        <h2>! Inbox is disable !</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Action</th>
+              <th>Received</th>
+            </tr>
+          </thead>
+          <tbody id="emailTableBody">
+            <tr>
+              <td colspan="3" style="text-align: center">
+                ! Inbox is disable !
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="email-details" id="emailDetails" aria-live="polite">
+        <h3>Email Details</h3>
+        <p><strong>From:</strong> <span id="emailFrom"></span></p>
+        <p><strong>Subject:</strong> <span id="emailSubject"></span></p>
+        <p><strong>Date:</strong> <span id="emailDate"></span></p>
+        <p><strong>Message:</strong></p>
+        <div id="emailBody" class="email-body"></div>
+        <button
+          class="back-button"
+          onclick="document.getElementById('emailDetails').style.display = 'none'"
+        >
+          Close
+        </button>
+      </section>
     </main>
     <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>We provide temporary email services to help you protect your privacy and avoid spam.</p>
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="https://www.1secmail.com/api/">API</a></li>
-                    <li><a href="https://www.1secmail.com/contact/">Contact</a></li>
-                    <li><a href="https://www.1secmail.com/tac/">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h2>Contact Us</h2>
-                <p>Email: support@1secmail.com</p>
-                <p>Phone: +123 456 7890</p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            We provide temporary email services to help you protect your privacy
+            and avoid spam.
+          </p>
         </div>
-        <div class="footer-bottom">
-            &copy; 2025 1secmail | Designed by Lowlife
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="https://www.1secmail.com/api/">API</a></li>
+            <li><a href="https://www.1secmail.com/contact/">Contact</a></li>
+            <li><a href="https://www.1secmail.com/tac/">Privacy Policy</a></li>
+          </ul>
         </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: support@1secmail.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 1secmail | Designed by Lowlife
+      </div>
     </footer>
-</body>
+  </body>
 </html>
