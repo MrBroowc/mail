@@ -772,12 +772,6 @@ button:hover {
     background: var(--white-transparent-15);
     border-radius: 10px;
 }
-/* Desktop view (screens larger than 1400px) */
-@media (min-width: 1401px) {
-    .side-panel {
-        display: block;
-    }
-}
 
 /* Tablet/Small Desktop view */
 @media (max-width: 1400px) {
