@@ -804,7 +804,7 @@ button:hover {
         display: none !important;
         visibility: hidden;
     }
-    .ad-banner {
+    .side-content {
         display: none;
     }
 }
