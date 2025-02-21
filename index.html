@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Bandits Temp Mails" />
+    <meta name="description"
+        content="Protect your inbox with a temporary disposable email address. Avoid spam and keep your personal email private. Discover the convenience of temp mail today." />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bandits Temp Mails" />
+    <meta property="og:description"
+        content="Protect your inbox with a temporary disposable email address. Avoid spam and keep your personal email private. Discover the convenience of temp mail today." />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/MrBroowc/mail/refs/heads/main/assets/img/small%20icon.png" />
+    <meta property="og:url" content="https://bezomorph.netlify.app/" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bandits Temp Mails" />
+    <meta name="twitter:description"
+        content="Protect your inbox with a temporary disposable email address. Avoid spam and keep your personal email private. Discover the convenience of temp mail today." />
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/MrBroowc/mail/refs/heads/main/assets/img/small%20icon.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/MrBroowc/mail/refs/heads/main/assets/img/small%20icon.png"
+        type="image/x-icon" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Bandits Mails</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="preload">
+    <div class="ad">
+        <!-- Left Ad Banner -->
+        <div class="ad-banner left-ad">
+            <h2 style="text-align: center;">Ex Ads left side:</h2>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://edmimages.net/edm/2018-LiveImages-EDM/blog/resources/uploads/upload_images/do_not_delete_files/image11.gif"
+                    alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image15-1024x323.gif"
+                    alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image7-1.gif" alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image8.gif" alt="Advertisement">
+            </a>
+        </div>
+        <!-- Right Ad Banner -->
+        <div class="ad-banner right-ad">
+            <h2 style="text-align: center;">Ex Ads right side:</h2>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image14.gif" alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image16.gif" alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image12.gif" alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/07/Banner-01-100.jpg"
+                    alt="Advertisement">
+            </a>
+            <a href="#" class="ad-content" target="_blank">
+                <img src="https://email.uplers.com/blog/wp-content/uploads/2024/11/image9.gif" alt="Advertisement">
+            </a>
+        </div>
+    </div>
+
+    <!-- Existing side-panel left-panel div -->
+    <div class="side-panel left-panel">
+        <div class="stats-container">
+            <h3>Quick Actions</h3>
+            <div class="quick-action-item">
+                <button id="quickGenerate5" class="quick-btn">
+                    <i class="fas fa-bolt"></i>
+                    Generate 5
+                </button>
+            </div>
+            <div class="quick-action-item">
+                <button id="quickGenerate10" class="quick-btn">
+                    <i class="fas fa-bolt"></i>
+                    Generate 10
+                </button>
+            </div>
+            <div class="domain-stats">
+                <h4>Available Domains</h4>
+                <div class="domain-tag">bndts.com</div>
+                <div class="domain-tag">gmail.com</div>
+                <div class="domain-tag">yahoo.com</div>
+            </div>
+        </div>
+    </div>
+    <div class="side-panel right-panel">
+        <div class="stats-panel">
+            <h3>Statistics</h3>
+            <div class="stat-item">
+                <i class="fas fa-history"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Generated Today</span>
+                    <span class="stat-value" id="todayCount">0</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Total Generated</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-star"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Favorite Domain</span>
+                    <span class="stat-value" id="favDomain">-</span>
+                </div>
+            </div>
+        </div>
+        <div class="format-panel">
+            <h3>Email Options</h3>
+            <div class="option-item">
+                <label>Length Range:</label>
+                <div class="range-inputs">
+                    <input type="number" id="minLength" value="8" min="4" max="20">
+                    <span>to</span>
+                    <input type="number" id="maxLength" value="16" min="4" max="20">
+                </div>
+            </div>
+            <div class="option-item">
+                <label>Character Set:</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="useLetters" checked>
+                        Letters
+                    </label>
+                    <label>
+                        <input type="checkbox" id="useNumbers" checked>
+                        Numbers
+                    </label>
+                    <label>
+                        <input type="checkbox" id="useSpecial">
+                        Special
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="themeToggleBtn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <h1>EMAIL GENERATOR</h1>
+        <div class="domain-selector">
+            <label for="domainSelect">Domain:</label>
+            <select id="domainSelect">
+                <option value="bndts.com">Bndts</option>
+                <option value="gmail.com">Gmail</option>
+                <option value="yahoo.com">Yahoo</option>
+            </select>
+        </div>
+        <div class="email-count">
+            <label for="emailCount">Amount:</label>
+            <input type="number" id="emailCount" min="1" max="30" value="1">
+        </div>
+        <div class="email-box">
+            <textarea id="emailOutput" readonly></textarea>
+        </div>
+        <div class="button-group">
+            <button id="generateBtn">Generate</button>
+            <a href="https://www.exitlag.com/register?utm_source=Software_V5&utm_medium=Login&utm_campaign=button_register&utm_content=alwayson"
+                target="_blank" class="exitlag-btn">
+                <button>Exitlag</button>
+            </a>
+            <button id="copyBtn" title="Copy to clipboard">
+                <i class="fas fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h2>Recent Emails</h2>
+                <button id="clearHistoryBtn" title="Clear history">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <ul id="emailHistory"></ul>
+        </div>
+
+        <!-- Custom Modal -->
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to clear the history?</p>
+                <div class="modal-buttons">
+                    <button id="confirmYes">OK</button>
+                    <button id="confirmNo">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
