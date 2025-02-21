@@ -739,7 +739,11 @@ button:hover {
 }
 
 .side-left {
+    direction: rtl;
     left: 1rem;
+}
+.side-left > * {
+    direction: ltr; /* Keeps content direction normal */
 }
 
 .side-right {
