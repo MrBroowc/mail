@@ -721,54 +721,68 @@ button:hover {
     right: 28rem;
 }
 
-.ad-banner {
+.side-content {
+    position: relative;
+    z-index: 90;
+}
+
+.promo-panel {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 360px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    z-index: 90;
+    gap: 1rem;
     max-height: 90vh;
     overflow-y: auto;
 }
 
-.ad-content {
+.side-left {
+    left: 1rem;
+}
+
+.side-right {
+    right: 1rem;
+}
+
+.content-card {
+    display: block;
+    text-decoration: none;
     background: var(--white-transparent-15);
     backdrop-filter: blur(8px);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 5px;
     transition: var(--transition-default);
 }
 
-.ad-content img {
+.content-card img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.ad-content img:hover {
+.content-card:hover img {
     transform: scale(1.05);
 }
 
-.left-ad {
+.side-left {
     left: 3rem;
 }
 
-.right-ad {
+.side-right {
     right: 3rem;
 }
 
-.ad-banner::-webkit-scrollbar {
+.promo-panel::-webkit-scrollbar {
     width: 4px;
 }
 
-.ad-banner::-webkit-scrollbar-track {
+.promo-panel::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.ad-banner::-webkit-scrollbar-thumb {
+.promo-panel::-webkit-scrollbar-thumb {
     background: var(--white-transparent-15);
     border-radius: 10px;
 }
