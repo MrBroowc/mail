@@ -107,7 +107,7 @@ generateBtn.addEventListener('click', () => {
 copyBtn.addEventListener('click', copyToClipboard);
 
 exitlagBtn.addEventListener('click', () => {
-    const newWindow = window.open('https://exitlag.com/register', '_blank');
+    const newWindow = window.open('https://www.exitlag.com/register?utm_source=Software_V5&utm_medium=Login&utm_campaign=button_register&utm_content=alwayson', '_blank');
     
     if (newWindow) {
         showNotification('Opening ExitLag registration...');
